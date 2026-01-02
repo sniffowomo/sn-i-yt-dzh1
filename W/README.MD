@@ -1,3 +1,9 @@
 # Work
 
-1. This is
+1. Main work info here
+2. Sub directories have the data
+
+# Dira
+
+| Dir | What |
+| :-: | :--: |
