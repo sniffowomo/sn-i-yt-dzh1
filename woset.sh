@@ -20,7 +20,9 @@ NC=$'\e[0m' # No Color
 
 declare -a CMDS=(
     "curl ipinfo.io | jq"
-    "go install github.com/charmbracelet/mods@latest" # Mods Panty
+    "go install github.com/charmbracelet/mods@latest" # Mods
+    go install github.com/karol-broda/snitch@latest   # Snitch - Netstat
+
 )
 CMDSE=${CMDS[1]}
 
