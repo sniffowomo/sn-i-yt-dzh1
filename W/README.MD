@@ -6,7 +6,6 @@
 
 # Dira
 
-| Dir | What |
-| :-: | :--: |
-
-[`t1`]
+|      Dir      |                What                |
+| :-----------: | :--------------------------------: |
+| [`tf`](./tf/) | Work related to learning Terraform |
