@@ -16,23 +16,21 @@ NC=$'\e[0m' # No Color
 
 # Actual Commands section
 
-# --- Setups ---
+# Array definition
 
-declare -a SETUPS=(
+declare -a CMDS=(
     "curl ipinfo.io | jq"
-
+    "go install github.com/charmbracelet/mods@latest" # Mods
+    "go install github.com/karol-broda/snitch@latest" # Snitch - Netstat
 )
-CMDSE=${SETUPS[2]}
+CMDSE=${CMDS[2]}
 
-# Setup Commands
-s1() {
+m1() {
     echo -e "${CYAN}---START---${NC}"
     echo -e "${BLUE}Executing: $CMDSE ${NC}"
     eval "$CMDSE"
     echo -e "${RED}---END---${NC}"
 }
-
-# --- Commands ---
 
 # Execution ZOne
 m1
