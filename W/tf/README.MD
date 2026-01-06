@@ -36,3 +36,4 @@ terraform apply
 ```
 
 - use this method for secret fucks
+- Note this is for bash, windows is different
