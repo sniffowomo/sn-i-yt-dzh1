@@ -1,6 +1,12 @@
+1. [nnn](#nnn)
+2. [Utilz](#utilz)
+   1. [nnn stuff](#nnn-stuff)
+3. [Error](#error)
+
 # nnn
 
 1. This is restaring the nnn work to see if it will work in docker
+2. Method doesnt work see error
 
 # Utilz
 
@@ -20,6 +26,8 @@ k:
 
 > [!CAUTION]
 > Doesnt work , need to use tf method
+
+# Error
 
 ```js
 8.app.github.dev" -> "potential-cod-g9pgg7j5jjqfqj4-5678.app.github.dev", Protocol: "https")
