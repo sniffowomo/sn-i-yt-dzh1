@@ -20,7 +20,7 @@ NC=$'\e[0m' # No Color
 
 declare -a SETUPS=(
     "docker volume create n8n_data"
-    "docker run -it --rm --name n8n -p 5678:5678 \
+    "docker run -it --rm --name n8n -p 5679:5678 \
 -e GENERIC_TIMEZONE=GB -e TZ=GB \
 -e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true \
 -e N8N_RUNNERS_ENABLED=true \
@@ -42,7 +42,13 @@ s1() {
     echo -e "${RED}---END---${NC}"
 }
 
+s2() {
+    echo -e "${CYAN}---RemovePanty---${NC}"
+    docker system prune -a --volumes -f
+    echo -e "${RED}---END---${NC}"
+}
+
 # --- Commands ---
 
 # Execution ZOne
-s1
+s2
