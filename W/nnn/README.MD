@@ -13,7 +13,18 @@
 
 ```js
 Email: panty@panty.com
-piss:  aS!@hgvQ5I5@ePbu
+piss:  aS!@hgvQ5I5@asePbu
 k:
-153a9be1-35f8-4dbf-a120-13d202b46489
+153a9be1-35f8-4dbf-a120-13d2s02b46489
 ```
+
+> [!CRITICAL]
+> Doesnt work , need to use tf method
+
+```js
+8.app.github.dev" -> "potential-cod-g9pgg7j5jjqfqj4-5678.app.github.dev", Protocol: "https")
+Origin header does NOT match the expected origin. (Origin: "https://localhost:5678" -> "localhost:5678", Expected: "potential-cod-g9pgg7j5jjqfqj4-5678.app.github.dev" -> "potential-cod-g9pgg7j5jjqfqj4-5678.app.github.dev", Protocol: "https")
+Origin header does NOT match the expected origin. (Origin: "https://localhost:5678" -> "localhost:5678", Expected: "potential-cod-g9pgg7j5jjqfqj4-5678.app.github.dev" -> "potential-cod-g9pgg7j5jjqfqj4-5678.app.github.dev", Protocol: "https")
+```
+
+- note this error is because of the proxy in CP , that renames origin. It is a default and unable to force
