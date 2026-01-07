@@ -20,21 +20,16 @@ NC=$'\e[0m' # No Color
 
 declare -a SETUPS=(
     "docker volume create n8n_data"
-    "docker run -it --rm \
-    --name n8n \
-    -p 5678:5678 \
-    -e GENERIC_TIMEZONE=\"GB\" \
-    -e TZ=\"GB\" \
-    -e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true \ 
-    -e N8N_RUNNERS_ENABLED=true \
-    -e N8N_HOST=\"potential-cod-g9pgg7j5jjqfqj4-5678.app.github.dev\" \
-    -e N8N_PORT=443 \
-    -e N8N_PROTOCOL=\"https\" \
-    -e WEBHOOK_URL=\"https://potential-cod-g9pgg7j5jjqfqj4-5678.app.github.dev/\" \
-    -e N8N_EDITOR_BASE_URL=\"https://potential-cod-g9pgg7j5jjqfqj4-5678.app.github.dev/\" \
-    -v n8n_data:/home/node/.n8n \
-    docker.n8n.io/n8nio/n8n"
-
+    "docker run -it --rm --name n8n -p 5678:5678 \
+-e GENERIC_TIMEZONE=GB -e TZ=GB \
+-e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true \
+-e N8N_RUNNERS_ENABLED=true \
+-e N8N_HOST=potential-cod-g9pgg7j5jjqfqj4-5678.app.github.dev \
+-e N8N_PORT=443 \
+-e N8N_PROTOCOL=https \
+-e WEBHOOK_URL=https://potential-cod-g9pgg7j5jjqfqj4-5678.app.github.dev/ \
+-e N8N_EDITOR_BASE_URL=https://potential-cod-g9pgg7j5jjqfqj4-5678.app.github.dev/ \
+-v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n"
 )
 
 # Setup Commands
