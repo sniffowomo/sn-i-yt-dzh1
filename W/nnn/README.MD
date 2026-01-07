@@ -18,7 +18,7 @@ k:
 153a9be1-35f8-4dbf-a120-13d2s02b46489
 ```
 
-> [!CRITICAL]
+> [!CAUTION]
 > Doesnt work , need to use tf method
 
 ```js
@@ -28,3 +28,5 @@ Origin header does NOT match the expected origin. (Origin: "https://localhost:56
 ```
 
 - note this error is because of the proxy in CP , that renames origin. It is a default and unable to force
+
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXM5dzQ2bzFzbTRtaGYzZjZkaDZhN2F1d3Y3YzBvd3lvdHV6NjZoZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1BQdjXovIqSLS/giphy.gif" align="center" width=800>
