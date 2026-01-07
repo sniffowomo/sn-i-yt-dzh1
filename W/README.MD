@@ -1,3 +1,6 @@
+1. [Work](#work)
+2. [Dira](#dira)
+
 # Work
 
 1. Main work info here
@@ -6,6 +9,7 @@
 
 # Dira
 
-|      Dir      |                What                |
-| :-----------: | :--------------------------------: |
-| [`tf`](./tf/) | Work related to learning Terraform |
+|       Dir       |                What                |
+| :-------------: | :--------------------------------: |
+|  [`tf`](./tf/)  | Work related to learning Terraform |
+| [`nnn`](./nnn/) |          nnn Work related          |
