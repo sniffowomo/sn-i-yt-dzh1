@@ -30,3 +30,5 @@ Origin header does NOT match the expected origin. (Origin: "https://localhost:56
 - note this error is because of the proxy in CP , that renames origin. It is a default and unable to force
 
 <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXM5dzQ2bzFzbTRtaGYzZjZkaDZhN2F1d3Y3YzBvd3lvdHV6NjZoZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1BQdjXovIqSLS/giphy.gif" align="center" width=800>
+
+> METHOD ABANDONED , GET BACK TO TF METHOD
