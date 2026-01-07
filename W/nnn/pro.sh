@@ -19,20 +19,30 @@ NC=$'\e[0m' # No Color
 # --- Setups ---
 
 declare -a SETUPS=(
-    "curl ipinfo.io | jq"
+    "docker volume create n8n_data"
+    "docker run -it --rm
+    --name n8n
+    -p 5678:5678
+    -e GENERIC_TIMEZONE=\"GB\"
+    -e TZ=\"GB\"
+    -e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+    -e N8N_RUNNERS_ENABLED=true
+    -v n8n_data:/home/node/.n8n
+    docker.n8n.io/n8nio/n8n"
 
 )
-CMDSE=${SETUPS[2]}
 
 # Setup Commands
 s1() {
     echo -e "${CYAN}---START---${NC}"
-    echo -e "${BLUE}Executing: $CMDSE ${NC}"
-    eval "$CMDSE"
+    echo -e "${BLUE}Executing: ${SETUPS[0]} ${NC}"
+    eval "${SETUPS[0]}"
+    echo -e "${BLUE}Executing: ${SETUPS[1]} ${NC}"
+    eval "${SETUPS[1]}"
     echo -e "${RED}---END---${NC}"
 }
 
 # --- Commands ---
 
 # Execution ZOne
-m1
+s1
