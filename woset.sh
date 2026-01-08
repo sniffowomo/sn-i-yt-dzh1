@@ -36,4 +36,4 @@ s1() {
 # --- Commands ---
 
 # Execution ZOne
-m1
+s1
