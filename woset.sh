@@ -20,9 +20,10 @@ NC=$'\e[0m' # No Color
 
 declare -a SETUPS=(
     "curl ipinfo.io | jq"
+    "brew install gemini-cli"
 
 )
-CMDSE=${SETUPS[2]}
+CMDSE=${SETUPS[1]}
 
 # Setup Commands
 s1() {
