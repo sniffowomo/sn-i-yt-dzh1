@@ -47,6 +47,18 @@ mf1() (
     echo -e "${RED}---AI MODULE END---${NC}"
 )
 
+# Gemini Cli Commands
+gm1() (
+    declare -a MFC=(
+        "gemini -f \"Write a terraform cheatsheet to be used in production\" >> gm_tf1.md"
+    )
+    CMDMF=${MFC[0]}
+    echo -e "${CYAN}---AI MODULE START---${NC}"
+    echo -e "${BLUE}Executing: $CMDMF ${NC}"
+    eval "$CMDMF"
+    echo -e "${RED}---AI MODULE END---${NC}"
+)
+
 # --- Commands ---
 
 # Execution ZOne
