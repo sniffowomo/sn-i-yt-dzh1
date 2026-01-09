@@ -33,7 +33,22 @@ s1() {
     echo -e "${RED}---END---${NC}"
 }
 
+# --- AI Specific Execution Commands ---
+
+# Mods Commands
+mf1() (
+    declare -a MFC=(
+        "mods -f \"Give me a terraform cheatsheet to be used in production \" -t \"Terraform cheatsheet\" >> tf1.md"
+    )
+    CMDMF=${MFC[0]}
+    echo -e "${CYAN}---AI MODULE START---${NC}"
+    echo -e "${BLUE}Executing: $CMDMF ${NC}"
+    eval "$CMDMF"
+    echo -e "${RED}---AI MODULE END---${NC}"
+)
+
 # --- Commands ---
 
 # Execution ZOne
-s1
+# s1
+mf1
