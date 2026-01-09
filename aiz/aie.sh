@@ -18,6 +18,8 @@ NC=$'\e[0m' # No Color
 
 # --- Setups ---
 
+# Note claude code is bastardfuckerbastard , need telephone for pantysmell
+
 declare -a SETUPS=(
     "curl ipinfo.io | jq"
     "brew install gemini-cli"
