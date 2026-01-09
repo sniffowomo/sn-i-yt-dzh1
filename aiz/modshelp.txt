@@ -1,0 +1,51 @@
+GPT on the command line. Built for pipelines.
+
+Usage:
+  mods [OPTIONS] [PREFIX TERM]
+
+Options:
+  -m, --model                                  Default model (gpt-3.5-turbo, gpt-4, ggml-gpt4all-j...)
+  -M, --ask-model                              Ask which model to use via interactive prompt
+  -a, --api                                    OpenAI compatible REST API (openai, localai, anthropic, ...)
+  -x, --http-proxy                             HTTP proxy to use for API requests
+  -f, --format                                 Ask for the response to be formatted as markdown unless otherwise set
+  --format-as                                  
+  -r, --raw                                    Render output as raw text when connected to a TTY
+  -P, --prompt                                 Include the prompt from the arguments and stdin, truncate stdin to specified number of lines
+  -p, --prompt-args                            Include the prompt from the arguments in the response
+  -c, --continue                               Continue from the last response or a given save title
+  -C, --continue-last                          Continue from the last response
+  -l, --list                                   Lists saved conversations
+  -t, --title                                  Saves the current conversation with the given title
+  -d, --delete                                 Deletes one or more saved conversations with the given titles or IDs
+  --delete-older-than                          Deletes all saved conversations older than the specified duration; valid values are ns, us, µs, μs, ms, s, m, h, d, w, mo, and y
+  -s, --show                                   Show a saved conversation with the given title or ID
+  -S, --show-last                              Show the last saved conversation
+  -q, --quiet                                  Quiet mode (hide the spinner while loading and stderr messages for success)
+  -h, --help                                   Show help and exit
+  -v, --version                                Show version and exit
+  --max-retries                                Maximum number of times to retry API calls
+  --no-limit                                   Turn off the client-side limit on the size of the input into the model
+  --max-tokens                                 Maximum number of tokens in response
+  --word-wrap                                  Wrap formatted output at specific width (default is 80)
+  --temp                                       Temperature (randomness) of results, from 0.0 to 2.0, -1.0 to disable
+  --stop                                       Up to 4 sequences where the API will stop generating further tokens
+  --topp                                       TopP, an alternative to temperature that narrows response, from 0.0 to 1.0, -1.0 to disable
+  --topk                                       TopK, only sample from the top K options for each subsequent token, -1 to disable
+  --fanciness                                  Your desired level of fanciness
+  --status-text                                Text to show while generating
+  --no-cache                                   Disables caching of the prompt/response
+  --reset-settings                             Backup your old settings file and reset everything to the defaults
+  --settings                                   Open settings in your $EDITOR
+  --dirs                                       Print the directories in which mods store its data
+  -R, --role                                   System role to use
+  --list-roles                                 List the roles defined in your configuration file
+  --theme                                      Theme to use in the forms; valid choices are charm, catppuccin, dracula, and base16
+  -e, --editor                                 Edit the prompt in your $EDITOR; only taken into account if no other args and if STDIN is a TTY
+  --mcp-list                                   List all available MCP servers
+  --mcp-list-tools                             List all available tools from enabled MCP servers
+  --mcp-disable                                Disable specific MCP servers
+
+Example:
+  # Let GPT pick something to watch
+  ls ~/vids | mods "Pick 5 action packed shows from the 80s from this list" | gum choose | xargs vlc

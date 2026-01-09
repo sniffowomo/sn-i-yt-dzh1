@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# General stuff setip
+# AI tools execution
 
 # Error handling
 set -euo pipefail
@@ -50,7 +50,7 @@ mf1() (
 # Gemini Cli Commands
 gm1() (
     declare -a MFC=(
-        "gemini -f \"Write a terraform cheatsheet to be used in production\" >> gm_tf1.md"
+        "gemini \"Write a terraform cheatsheet to be used in production\" >> gm_tf1.md"
     )
     CMDMF=${MFC[0]}
     echo -e "${CYAN}---AI MODULE START---${NC}"
