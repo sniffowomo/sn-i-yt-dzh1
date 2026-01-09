@@ -4,3 +4,8 @@
 2. You have to export the groq API, and then use
 3. This is public panty , so dont hardcode booty , bastafuka will steal
 4. Note you have gemminniclliii insert anys of phrzyaa
+
+# Execution Notes
+
+1. When redirecting output from tools , `mods` works perfectly fine, but `gemini` has multiple errors
+2. Use gemini mostly for

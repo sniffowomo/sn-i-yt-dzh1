@@ -47,7 +47,8 @@ mf1() (
     echo -e "${RED}---AI MODULE END---${NC}"
 )
 
-# Gemini Cli Commands
+# Gemini Cli Commands - note you cannot use it this way
+
 gm1() (
     declare -a MFC=(
         "gemini \"Write a terraform cheatsheet to be used in production\" >> gm_tf1.md"
