@@ -63,4 +63,5 @@ gm1() (
 
 # Execution ZOne
 # s1
-mf1
+# mf1
+gm1
