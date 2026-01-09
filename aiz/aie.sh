@@ -21,9 +21,10 @@ NC=$'\e[0m' # No Color
 declare -a SETUPS=(
     "curl ipinfo.io | jq"
     "brew install gemini-cli"
+    "brew install --cask claude-code"
 
 )
-CMDSE=${SETUPS[1]}
+CMDSE=${SETUPS[2]}
 
 # Setup Commands
 s1() {
@@ -63,6 +64,6 @@ gm1() (
 # --- Commands ---
 
 # Execution ZOne
-# s1
+s1
 # mf1
-gm1
+# gm1
