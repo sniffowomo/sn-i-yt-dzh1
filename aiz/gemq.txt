@@ -1,0 +1,7 @@
+# Query 1
+Compare opencode, ampcli, mods from charms sh, gemini cli , claude code, and find out which one is cheaper and stable
+for production usage. The problem is many popular LLM providers suddenly enact rate limits affecting pro accounts which 
+is unacceptable , i need something that is reliable. Since I have to do customer delivery. Do a detailed search, answer 
+should be tabular format with a score out of 5, All information should be as of today , and should have verifiable 
+references, dont guess or extrapolate theoretically, cross reference against social media, blogs and latest tech news
+outlets. Results should be writed to a file called gq1.md
