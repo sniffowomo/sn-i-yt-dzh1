@@ -44,8 +44,9 @@ s1() {
 mf1() (
     declare -a MFC=(
         "mods -f \"Give me a terraform cheatsheet to be used in production \" -t \"Terraform cheatsheet\" >> tf1.md"
+        "mods -f \"Give me concise comparison between Agentic Cli tools - OpenCode, Droids, AMP Cli, Gemini Cli , Claude code, Mods - Focus on high impact differences in pricing and production usage , and find out which agentic platform I can use today for work with my clients \" -t \"Terraform cheatsheet\" >> tf2.md"
     )
-    CMDMF=${MFC[0]}
+    CMDMF=${MFC[1]}
     echo -e "${CYAN}---AI MODULE START---${NC}"
     echo -e "${BLUE}Executing: $CMDMF ${NC}"
     eval "$CMDMF"
@@ -68,6 +69,6 @@ gm1() (
 # --- Commands ---
 
 # Execution ZOne
-s1
-# mf1
+# s1
+mf1
 # gm1
