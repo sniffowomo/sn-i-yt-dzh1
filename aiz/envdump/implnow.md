@@ -67,3 +67,16 @@ The executable will be located at `target/release/envdump`.
     ```
 
 This completes the implementation of the `envdump` tool as per the project requirements.
+
+## 5. Version History
+
+### Version 0.1.0
+- Initial release.
+
+### Version 0.1.1
+- Added color to the table output for better readability.
+  - Headers are now blue.
+  - Variable names are green.
+  - Variable values are yellow.
+- Added a descriptive help message to the `--help` flag.
+

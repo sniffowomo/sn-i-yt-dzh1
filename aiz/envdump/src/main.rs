@@ -1,13 +1,12 @@
-use comfy_table::{Table, ContentArrangement};
+use comfy_table::{Cell, Color, Table, ContentArrangement};
 use comfy_table::presets::UTF8_FULL;
 use clap::Parser;
 use std::env;
 use std::fs::File;
 use std::io::{self, Write};
 
-/// A simple CLI to display environment variables in a colored table.
 #[derive(Parser, Debug)]
-#[command(author, version, about, long_about = None)]
+#[command(author, version, about = "A simple CLI to display environment variables in a colored table.", long_about = None)]
 struct Args {
     /// Optional: File path to write the output to.
     #[arg(short, long)]
@@ -21,7 +20,10 @@ fn main() -> io::Result<()> {
     table
         .load_preset(UTF8_FULL)
         .set_content_arrangement(ContentArrangement::Dynamic)
-        .set_header(vec!["Variable", "Value"]);
+        .set_header(vec![
+            Cell::new("Variable").fg(Color::Blue),
+            Cell::new("Value").fg(Color::Blue),
+        ]);
 
     let vars: Vec<(String, String)> = env::vars().collect();
     let max_width = if let Some((width, _)) = term_size::dimensions() {
@@ -34,7 +36,10 @@ fn main() -> io::Result<()> {
     table.set_width(max_width as u16);
 
     for (key, value) in vars {
-        table.add_row(vec![key, value]);
+        table.add_row(vec![
+            Cell::new(key).fg(Color::Green),
+            Cell::new(value).fg(Color::Yellow),
+        ]);
     }
 
     let table_output = table.to_string();
