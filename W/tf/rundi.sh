@@ -15,7 +15,8 @@ BWHITE='\033[1;97m'
 RESET='\033[0m'
 
 # --- Commands ---
-# All comands will be in an array and executed as needed
+
+# All comands will be in an array and executed as needed single command
 t1() {
     declare -a CMD=(
         # Installing terraform from manual
@@ -27,7 +28,7 @@ t1() {
     echo -e "${BGREEN}Done!${RESET}"
 }
 
-# Initial group command executed
+# Initial group command executed for installation
 t2() {
     echo -e "${BBLUE}--- Installing Terraform ---${RESET}"
     wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
