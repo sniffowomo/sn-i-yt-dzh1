@@ -37,5 +37,14 @@ t2() {
     echo -e "${BGREEN}---Terraform installed successfully!---${RESET}"
 }
 
+# OpenTofu - Opensource Version of Terrafrom installation
+# https://opentofu.org/docs/intro/install/homebrew/
+
+t3() {
+    echo -e "${BBLUE}--- Open Tofu Install Via Brew ---${RESET}"
+    brew install opentofu
+    echo -e "${BGREEN}---Terraform installed successfully!---${RESET}"
+}
+
 # -- Execution ---
-t2
+t3
