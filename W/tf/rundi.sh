@@ -21,9 +21,11 @@ tfexec() {
     declare -a CMD=(
         # Check Terraform Version
         "terraform --version"
+        # Terrform login to get Creds for remote backend
+        "terraform login"
 
     )
-    CMDEXEC="${CMD[0]}"
+    CMDEXEC="${CMD[1]}"
     echo -e "${BBLUE} · · ────── ꒰ঌ·✦·໒꒱ ────── · ·"
     date
     echo -e "Executing:${RESET} ${CMDEXEC}"
@@ -68,7 +70,7 @@ openTofuInstall() {
 # -- Execution Blocks ---
 panty() {
     tfexec
-    otfexec
+    # otfexec
 }
 
 # Main Execution
