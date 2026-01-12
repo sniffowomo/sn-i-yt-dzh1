@@ -25,10 +25,11 @@ tfexec() {
     )
     CMDEXEC="${CMD[0]}"
     echo -e "${BBLUE} · · ────── ꒰ঌ·✦·໒꒱ ────── · ·"
+    date
     echo -e "Executing:${RESET} ${CMDEXEC}"
     eval "${CMDEXEC}"
     echo -e "${BGREEN}Done!"
-    echo -e "───── ⋆⋅☆⋅⋆ ─────Done!${RESET}"
+    echo -e "───── ⋆⋅☆⋅⋆ ─────${RESET}"
 }
 
 # OpenTofu Execution
@@ -39,11 +40,11 @@ otfexec() {
 
     )
     CMDEXEC="${CMD[0]}"
-    echo -e "${BBLUE} · · ────── ꒰ঌ·✦·໒꒱ ────── · ·"
+    echo -e "${BBLUE}────── ꒰ঌ·✦·໒꒱ ──────"
     echo -e "Executing:${RESET} ${CMDEXEC}"
     eval "${CMDEXEC}"
-    echo -e "${BGREEN}Done!$"
-    echo -e "───── ⋆⋅☆⋅⋆ ─────Done!${RESET}"
+    echo -e "${BGREEN}Done!"
+    echo -e "───── ⋆⋅☆⋅⋆ ─────${RESET}"
 }
 
 # Initial group command executed for installation
