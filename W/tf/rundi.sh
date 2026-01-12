@@ -16,10 +16,24 @@ RESET='\033[0m'
 
 # --- Commands ---
 
-# All comands will be in an array and executed as needed single command
-t1() {
+# Terraform Execution
+tfexec() {
     declare -a CMD=(
-        # Installing terraform from manual
+        # Check Terraform Version
+        "terraform --version"
+
+    )
+    CMDEXEC="${CMD[0]}"
+    echo -e "${BBLUE}Executing:${RESET} ${CMDEXEC}"
+    eval "${CMDEXEC}"
+    echo -e "${BGREEN}Done!${RESET}"
+}
+
+# OpenTofu Execution
+otfexec() {
+    declare -a CMD=(
+        # OpenTofu Version Check
+        "tofu --version"
 
     )
     CMDEXEC="${CMD[0]}"
@@ -29,7 +43,7 @@ t1() {
 }
 
 # Initial group command executed for installation
-t2() {
+terrformInstall() {
     echo -e "${BBLUE}--- Installing Terraform ---${RESET}"
     wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
@@ -40,11 +54,17 @@ t2() {
 # OpenTofu - Opensource Version of Terrafrom installation
 # https://opentofu.org/docs/intro/install/homebrew/
 
-t3() {
+openTofuInstall() {
     echo -e "${BBLUE}--- Open Tofu Install Via Brew ---${RESET}"
     brew install opentofu
     echo -e "${BGREEN}---Terraform installed successfully!---${RESET}"
 }
 
-# -- Execution ---
-t3
+# -- Execution Blocks ---
+panty() {
+    tfexec
+    otfexec
+}
+
+# Main Execution
+panty
