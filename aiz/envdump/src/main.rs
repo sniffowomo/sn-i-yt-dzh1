@@ -1,7 +1,7 @@
 use comfy_table::{Cell, Color, Table, ContentArrangement};
 use comfy_table::presets::UTF8_FULL;
 use clap::Parser;
-use std::env;
+use std::env; // Standard library for accessing env variables 
 use std::fs::File;
 use std::io::{self, Write};
 
@@ -25,7 +25,7 @@ fn main() -> io::Result<()> {
             Cell::new("Value").fg(Color::Blue),
         ]);
 
-    let vars: Vec<(String, String)> = env::vars().collect();
+    let vars: Vec<(String, String)> = env::vars().collect(); // Variables being collected here into a Vector
     let max_width = if let Some((width, _)) = term_size::dimensions() {
         width
     } else {
