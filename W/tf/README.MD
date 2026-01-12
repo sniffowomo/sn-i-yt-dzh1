@@ -1,9 +1,10 @@
 1. [TF - Learning terraform](#tf---learning-terraform)
 2. [Learning Pussy](#learning-pussy)
 3. [Important Links](#important-links)
-4. [Notes](#notes)
+4. [FilePussy](#filepussy)
+5. [Notes](#notes)
    1. [Regarding storing envs](#regarding-storing-envs)
-5. [Regarading Remote backend](#regarading-remote-backend)
+6. [Regarading Remote backend](#regarading-remote-backend)
 
 # TF - Learning terraform
 
@@ -23,6 +24,12 @@
 | [`e2e TF`](https://registry.terraform.io/providers/e2eterraformprovider/e2e/latest/docs/resources/node) |  Official capabilities of the api  |
 |      [`e2e TF Registry`](https://registry.terraform.io/providers/e2eterraformprovider/e2e/latest)       | e2e Registry of TF plugin releases |
 |             [`e2e TF Git`](https://github.com/e2eterraformprovider/terraform-provider-e2e)              |     Official Git of e2e plugin     |
+
+# FilePussy
+
+|          Pussy           |            Smell            |
+| :----------------------: | :-------------------------: |
+| [`rundi.sh`](./rundi.sh) | Main PantySmelling Commands |
 
 # Notes
 
