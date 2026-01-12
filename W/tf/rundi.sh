@@ -44,7 +44,7 @@ tfexec() {
         "terraform login"
 
     )
-    CMDEXEC="${CMD[0]}"
+    CMDEXEC="${CMD[1]}"
     echo -e "${BBLUE} · · ────── ꒰ঌ·✦·໒꒱ ────── · ·"
     date && smell_fart
     echo -e "Executing:${RESET} ${CMDEXEC}"
