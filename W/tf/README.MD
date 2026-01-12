@@ -3,6 +3,7 @@
 3. [Important Links](#important-links)
 4. [Notes](#notes)
    1. [Regarding storing envs](#regarding-storing-envs)
+5. [Regarading Remote backend](#regarading-remote-backend)
 
 # TF - Learning terraform
 
@@ -37,3 +38,8 @@ terraform apply
 
 - use this method for secret fucks
 - Note this is for bash, windows is different
+
+# Regarading Remote backend
+
+1. From - [`Tokens`](https://app.terraform.io/app/settings/tokens) - Made tokens exported to bash
+2. [`Remote BackendBunda`](https://developer.hashicorp.com/terraform/language/backend/remote) - Docs for learning about RemotePussy Licking.
