@@ -18,7 +18,7 @@ RESET='\033[0m'
 
 # Booty
 
-show_art() {
+smell_fart() {
     cat <<'EOF'
 ⠄⠄⠸⣿⣿⢣⢶⣟⣿⣖⣿⣷⣻⣮⡿⣽⣿⣻⣖⣶⣤⣭⡉⠄⠄⠄⠄⠄
 ⠄⠄⠄⢹⠣⣛⣣⣭⣭⣭⣁⡛⠻⢽⣿⣿⣿⣿⢻⣿⣿⣿⣽⡧⡄⠄⠄⠄
@@ -46,7 +46,7 @@ tfexec() {
     )
     CMDEXEC="${CMD[0]}"
     echo -e "${BBLUE} · · ────── ꒰ঌ·✦·໒꒱ ────── · ·"
-    date && show_art
+    date && smell_fart
     echo -e "Executing:${RESET} ${CMDEXEC}"
     eval "${CMDEXEC}"
     echo -e "${BGREEN}Done!"
