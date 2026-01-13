@@ -71,10 +71,11 @@ gm1() (
 # Open Code Commands
 op1() (
     declare -a MFC=(
-        "opencode web"       # Open Web Interface
-        "opencode auth list" # List auth for LLm service providers
+        "opencode web"                     # Open Web Interface
+        "opencode auth list"               # List auth for LLm service providers
+        "curl https://models.dev/api.json" # Accessing models via cli on models.dev from opencode
     )
-    CMDMF=${MFC[1]}
+    CMDMF=${MFC[2]}
     echo -e "${CYAN}---AI MODULE START---${NC}"
     echo -e "${BLUE}Executing: $CMDMF ${NC}"
     eval "$CMDMF"
