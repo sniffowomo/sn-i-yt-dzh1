@@ -71,9 +71,10 @@ gm1() (
 # Open Code Commands
 op1() (
     declare -a MFC=(
-        "opencode web" # Open Web Interface
+        "opencode web"       # Open Web Interface
+        "opencode auth list" # List auth for LLm service providers
     )
-    CMDMF=${MFC[0]}
+    CMDMF=${MFC[1]}
     echo -e "${CYAN}---AI MODULE START---${NC}"
     echo -e "${BLUE}Executing: $CMDMF ${NC}"
     eval "$CMDMF"
