@@ -27,8 +27,10 @@ declare -a SETUPS=(
     "brew install --cask claude-code"
     "brew uninstall --cask claude-code"
     "bun install -g @google/gemini-cli@preview"
+    "curl -fsSL https://opencode.ai/install | bash" # Install OpenCode
+
 )
-CMDSE=${SETUPS[5]}
+CMDSE=${SETUPS[6]}
 
 # Setup Commands
 s1() {
@@ -69,6 +71,6 @@ gm1() (
 # --- Commands ---
 
 # Execution ZOne
-# s1
-mf1
+s1
+# mf1
 # gm1

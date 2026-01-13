@@ -10,3 +10,11 @@
 1. When redirecting output from tools , `mods` works perfectly fine, but `gemini` has multiple errors
 2. Use gemini mostly for direct cli execution, also since `mods` is working with `groq` its atleast 5x faster , booty smells
 3. Folder `habitz` - Good section of agenticassisr
+
+# Installed Panty
+
+|                            Panty                            |                                       Smell                                       |
+| :---------------------------------------------------------: | :-------------------------------------------------------------------------------: |
+|       [`mods`](https://github.com/charmbracelet/mods)       |                                 Ai access via cli                                 |
+| [`Gemini-Cli`](https://google-gemini.github.io/gemini-cli/) |                                    Gemini Cli                                     |
+|         [`OpenCode`](https://opencode.ai/download)          | OpenCode - Another AI Cli works with [`models.dev`](https://opencode.ai/download) |
