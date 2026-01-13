@@ -68,9 +68,22 @@ gm1() (
     echo -e "${RED}---AI MODULE END---${NC}"
 )
 
+# Open Code Commands
+op1() (
+    declare -a MFC=(
+        "opencode web" # Open Web Interface
+    )
+    CMDMF=${MFC[0]}
+    echo -e "${CYAN}---AI MODULE START---${NC}"
+    echo -e "${BLUE}Executing: $CMDMF ${NC}"
+    eval "$CMDMF"
+    echo -e "${RED}---AI MODULE END---${NC}"
+)
+
 # --- Commands ---
 
 # Execution ZOne
-s1
+# s1
 # mf1
 # gm1
+op1
