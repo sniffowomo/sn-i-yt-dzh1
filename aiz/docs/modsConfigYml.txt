@@ -1,0 +1,193 @@
+# OpenAI compatible REST API (openai, localai, anthropic, ...)
+default-api: groq
+# Default model (gpt-3.5-turbo, gpt-4, ggml-gpt4all-j...)
+default-model: groq/compound-mini
+# Text to append when using the -f flag
+format-text:
+  markdown: 'Format the response as markdown without enclosing backticks.'
+  json: 'Format the response as json without enclosing backticks.'
+# MCP Servers configurations
+mcp-servers:
+  # Example: GitHub MCP via Docker:
+  # github:
+  #   command: docker
+  #   env:
+  #     - GITHUB_PERSONAL_ACCESS_TOKEN=xxxyyy
+  #   args:
+  #     - run
+  #     - "-i"
+  #     - "--rm"
+  #     - "-e"
+  #     - GITHUB_PERSONAL_ACCESS_TOKEN
+  #     - "ghcr.io/github/github-mcp-server"
+# Timeout for MCP server calls, defaults to 15 seconds
+mcp-timeout: 15s
+# List of predefined system messages that can be used as roles
+roles:
+  "default": []
+  # Example, a role called `shell`:
+  # shell:
+  #   - you are a shell expert
+  #   - you do not explain anything
+  #   - you simply output one liners to solve the problems you're asked
+  #   - you do not provide any explanation whatsoever, ONLY the command
+# Ask for the response to be formatted as markdown unless otherwise set
+format: false
+# System role to use
+role: "default"
+# Render output as raw text when connected to a TTY
+raw: false
+# Quiet mode (hide the spinner while loading and stderr messages for success)
+quiet: false
+# Temperature (randomness) of results, from 0.0 to 2.0, -1.0 to disable
+temp: 1.0
+# TopP, an alternative to temperature that narrows response, from 0.0 to 1.0, -1.0 to disable
+topp: 1.0
+# TopK, only sample from the top K options for each subsequent token, -1 to disable
+topk: 50
+# Turn off the client-side limit on the size of the input into the model
+no-limit: false
+# Wrap formatted output at specific width (default is 80)
+word-wrap: 80
+# Include the prompt from the arguments in the response
+include-prompt-args: false
+# Include the prompt from the arguments and stdin, truncate stdin to specified number of lines
+include-prompt: 0
+# Maximum number of times to retry API calls
+max-retries: 5
+# Your desired level of fanciness
+fanciness: 10
+# Text to show while generating
+status-text: Generating
+# Theme to use in the forms; valid choices are charm, catppuccin, dracula, and base16
+theme: charm
+# Default character limit on input to model
+max-input-chars: 128000
+# Maximum number of tokens in response
+# max-tokens: 100
+# 
+max-completion-tokens: 4096
+# Aliases and endpoints for OpenAI compatible REST API
+apis:
+  groq:
+    base-url: https://api.groq.com/openai/v1
+    api-key:
+    api-key-env: GROQ_API_KEY
+    models: # https://console.groq.com/docs/models
+      # Production models
+      groq/compound:
+        aliases: ["compound", "research", "agent"]
+        # Reduced to bypass gateway filters
+        max-input-chars: 80000 
+        max-completion-tokens: 4096
+      groq/compound-mini:
+        aliases: ["mini-research", "fast-agent"]
+        max-input-chars: 80000
+        max-completion-tokens: 4096
+  # GitHub Models
+  # https://github.com/marketplace/models
+  github-models:
+    base-url: https://models.github.ai/inference
+    api-key:
+    api-key-env: GITHUB_PERSONAL_ACCESS_TOKEN
+    models:
+      openai/gpt-4.1:
+        max-input-chars: 392000
+      openai/o3-mini:
+        max-input-chars: 392000
+      openai/o4-mini:
+        max-input-chars: 392000
+      openai/text-embedding-3-large:
+        max-input-chars: 392000
+      openai/text-embedding-3-small:
+        max-input-chars: 392000
+      ai21-labs/AI21-Jamba-1.5-Large:
+        max-input-chars: 392000
+      ai21-labs/AI21-Jamba-1.5-Mini:
+        max-input-chars: 392000
+      cohere/cohere-command-a:
+        max-input-chars: 392000
+      cohere/Cohere-command-r:
+        max-input-chars: 392000
+      cohere/Cohere-command-r-08-2024:
+        max-input-chars: 392000
+      cohere/Cohere-command-r-plus:
+        max-input-chars: 392000
+      cohere/Cohere-command-r-plus-08-2024:
+        max-input-chars: 392000
+      cohere/Cohere-embed-v3-english:
+        max-input-chars: 392000
+      cohere/Cohere-embed-v3-multilingual:
+        max-input-chars: 392000
+      core42/jais-30b-chat:
+        max-input-chars: 392000
+      deepseek/DeepSeek-R1:
+        max-input-chars: 392000
+      deepseek/DeepSeek-V3-0324:
+        max-input-chars: 392000
+      meta/Llama-3.2-11B-Vision-Instruct:
+        max-input-chars: 392000
+      meta/Llama-3.2-90B-Vision-Instruct:
+        max-input-chars: 392000
+      meta/Llama-3.3-70B-Instruct:
+        max-input-chars: 392000
+      meta/Llama-4-Maverick-17B-128E-Instruct-FP8:
+        max-input-chars: 392000
+      meta/Llama-4-Scout-17B-16E-Instruct:
+        max-input-chars: 392000
+      meta/Meta-Llama-3.1-405B-Instruct:
+        max-input-chars: 392000
+      meta/Meta-Llama-3.1-70B-Instruct:
+        max-input-chars: 392000
+      meta/Meta-Llama-3.1-8B-Instruct:
+        max-input-chars: 392000
+      meta/Meta-Llama-3-70B-Instruct:
+        max-input-chars: 392000
+      meta/Meta-Llama-3-8B-Instruct:
+        max-input-chars: 392000
+      mistral-ai/Codestral-2501:
+        max-input-chars: 392000
+      mistral-ai/Ministral-3B:
+        max-input-chars: 392000
+      mistral-ai/Mistral-Large-2411:
+        max-input-chars: 392000
+      mistral-ai/mistral-medium-2505:
+        max-input-chars: 392000
+      mistral-ai/Mistral-Nemo:
+        max-input-chars: 392000
+      mistral-ai/mistral-small-2503:
+        max-input-chars: 392000
+      xai/grok-3:
+        max-input-chars: 392000
+      xai/grok-3-mini:
+        max-input-chars: 392000
+      microsoft/MAI-DS-R1:
+        max-input-chars: 392000
+      microsoft/Phi-3.5-mini-instruct:
+        max-input-chars: 392000
+      microsoft/Phi-3.5-MoE-instruct:
+        max-input-chars: 392000
+      microsoft/Phi-3.5-vision-instruct:
+        max-input-chars: 392000
+      microsoft/Phi-3-medium-128k-instruct:
+        max-input-chars: 392000
+      microsoft/Phi-3-medium-4k-instruct:
+        max-input-chars: 392000
+      microsoft/Phi-3-mini-128k-instruct:
+        max-input-chars: 392000
+      microsoft/Phi-3-mini-4k-instruct:
+        max-input-chars: 392000
+      microsoft/Phi-3-small-128k-instruct:
+        max-input-chars: 392000
+      microsoft/Phi-3-small-8k-instruct:
+        max-input-chars: 392000
+      microsoft/Phi-4:
+        max-input-chars: 392000
+      microsoft/Phi-4-mini-instruct:
+        max-input-chars: 392000
+      microsoft/Phi-4-mini-reasoning:
+        max-input-chars: 392000
+      microsoft/Phi-4-multimodal-instruct:
+        max-input-chars: 392000
+      microsoft/Phi-4-reasoning:
+        max-input-chars: 392000
