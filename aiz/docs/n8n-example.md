@@ -1,4 +1,4 @@
-# n8n Automation Example - From
+# n8n Automation Example - From miniMax OpenCode
 
 ## Simple Email Notification Workflow
 
