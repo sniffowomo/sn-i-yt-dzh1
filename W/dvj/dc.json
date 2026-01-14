@@ -22,8 +22,8 @@
         "ms-python.vscode-pylance",
         "charliermarsh.ruff",
         "golang.go",
-        "astral-sh.ty",
         "ms-vscode.vscode-typescript-next",
+        "astral-sh.ty",
 
         "esbenp.prettier-vscode",
         "dbaeumer.vscode-eslint",
@@ -34,9 +34,8 @@
         "mads-hartmann.bash-ide-vscode",
         "rogalmic.bash-debug",
         "jeff-hykin.better-shellscript-syntax",
-        "pinage404.bash-extension-pack",
         "timonwong.shellcheck",
-        "foxundermoon.shell-format",
+        "tombigel.format-shell",
 
         "mhutchie.git-graph",
         "github.vscode-pull-request-github",
