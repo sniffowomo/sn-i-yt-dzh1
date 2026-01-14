@@ -18,3 +18,7 @@
 |       [`mods`](https://github.com/charmbracelet/mods)       |                                 Ai access via cli                                 |
 | [`Gemini-Cli`](https://google-gemini.github.io/gemini-cli/) |                                    Gemini Cli                                     |
 |         [`OpenCode`](https://opencode.ai/download)          | OpenCode - Another AI Cli works with [`models.dev`](https://opencode.ai/download) |
+
+## OpenCode OC Notes
+
+1. See [`this`](https://opencode.ai/docs/zen/) - The free model MiniMaxM2.1 has web search access
