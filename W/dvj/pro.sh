@@ -20,8 +20,10 @@ NC=$'\e[0m' # No Color
 
 declare -a CMDS=(
     "code --list-extensions"
+    "delta se.sh ../../.devcontainer/setup.sh"
+    "delta dc.json ../../.devcontainer/devcontainer.json"
 )
-CMDSE=${CMDS[0]}
+CMDSE=${CMDS[1]}
 
 m1() {
     echo -e "${CYAN}---START---${NC}"
