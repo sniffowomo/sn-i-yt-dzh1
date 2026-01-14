@@ -49,7 +49,7 @@ mf1() (
         "mods -f \"Give me concise comparison between Agentic Cli tools - OpenCode, Droids, AMP Cli, Gemini Cli , Claude code, Mods - Focus on high impact differences in pricing and production usage , and find out which agentic platform I can use today for work with my clients \" -t \"Terraform cheatsheet\" >> tf2.md"
         "mods -f \"How to do n8n automation, explain the process , and write it to a file called n8n_groq_mods.md\" >> mods_groq_n8n.md"
     )
-    CMDMF=${MFC[2]}
+    CMDMF=${MFC[1]}
     echo -e "${CYAN}---AI MODULE START---${NC}"
     echo -e "${BLUE}Executing: $CMDMF ${NC}"
     eval "$CMDMF"
