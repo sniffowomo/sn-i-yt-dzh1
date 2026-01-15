@@ -13,3 +13,5 @@
 | :-------------: | :--------------------------------: |
 |  [`tf`](./tf/)  | Work related to learning Terraform |
 | [`nnn`](./nnn/) |          nnn Work related          |
+|  [`t1`](./t1/)  |      Mods installation script      |
+|  [`tf`](./tf/)  |      Terraform Tutiza Workaz       |
