@@ -1,3 +1,6 @@
+<h1 align="center"><code>tf</code></h1>
+<h1 align="center"><i>TerraformStudy</i></h1>
+
 1. [TF - Learning terraform](#tf---learning-terraform)
 2. [Learning Pussy](#learning-pussy)
 3. [Important Links](#important-links)

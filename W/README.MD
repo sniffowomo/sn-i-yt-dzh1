@@ -1,3 +1,6 @@
+<h1 align="center"><code>W</code></h1>
+<h1 align="center"><i>Main Working Diraz</i></h1>
+
 1. [Work](#work)
 2. [Dira](#dira)
 
