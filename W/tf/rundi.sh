@@ -86,10 +86,35 @@ openTofuInstall() {
     echo -e "${BGREEN}---Terraform installed successfully!---${RESET}"
 }
 
+# ---  UV Commands ---
+
+# e2e cli
+
+e2eisntall() {
+    declare -a CMD=(
+        # Installing uv and chnging
+        "uv init e1"              # e1 being the e2e tries
+        "cd e1 && uv run main.py" # Running the main
+
+    )
+
+    for CMDEXEC in "${CMD[@]}"; do
+        echo -e "${BBLUE}────── ꒰ঌ·✦·໒꒱ ──────${RESET}"
+        echo -e "Executing: ${CMDEXEC}"
+        eval "${CMDEXEC}"
+        echo -e "${BGREEN}Done!${RESET}"
+        echo -e "${BBLUE}───── ⋆⋅☆⋅⋆ ─────${RESET}"
+        echo # Add blank line between commands
+    done
+}
+
+# /////////////////////////////
+
 # -- Execution Blocks ---
 panty() {
-    tfexec
+    # tfexec
     # otfexec
+    e2eisntall
 }
 
 # Main Execution
