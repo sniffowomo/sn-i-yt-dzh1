@@ -43,9 +43,10 @@ run1() {
         "e2e_cli alias --help"
         "e2e_cli alias add"  # Adding panty
         "e2e_cli alias view" # View
+        "e2e_cli node list"  # List all nodes, comes as a json file
 
     )
-    CMDEXEC="${CMD[5]}"
+    CMDEXEC="${CMD[6]}"
     echo -e "${BBLUE} · · ────── ꒰ঌ·✦·໒꒱ ────── · ·"
     date && smell_fart
     echo -e "Executing:${RESET} ${CMDEXEC}"

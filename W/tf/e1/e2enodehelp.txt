@@ -1,0 +1,22 @@
+usage: e2e_cli --alias node [-h] node-command/--action  inputs... 
+
+options:
+  -h, --help          show this help message and exit
+  -action, --action   Actions on node are : 
+                              lock_vm
+                              unlock_vm
+                              reinstall
+                              reboot
+                              power_on
+                              power_off
+                              monitor
+                              rename_node
+                              enable_recovery
+                              disable_recovery
+
+Node Commands:
+  
+    create            To create a new node
+    delete            To delete a specific node
+    list              To get a list of all nodes
+    get               To get a list of all nodes
