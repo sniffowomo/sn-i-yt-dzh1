@@ -90,7 +90,7 @@ openTofuInstall() {
 
 # e2e cli
 
-e2eisntall() {
+e2e1() {
     declare -a CMD=(
         # Installing uv and chnging
         "uv init e1"              # e1 being the e2e tries
@@ -106,6 +106,19 @@ e2eisntall() {
         echo -e "${BBLUE}───── ⋆⋅☆⋅⋆ ─────${RESET}"
         echo # Add blank line between commands
     done
+}
+
+e2e2() {
+    declare -a CMD=(
+        ""
+
+    )
+    CMDEXEC="${CMD[0]}"
+    echo -e "${BBLUE}────── ꒰ঌ·✦·໒꒱ ──────"
+    echo -e "Executing:${RESET} ${CMDEXEC}"
+    eval "${CMDEXEC}"
+    echo -e "${BGREEN}Done!"
+    echo -e "───── ⋆⋅☆⋅⋆ ─────${RESET}"
 }
 
 # /////////////////////////////
