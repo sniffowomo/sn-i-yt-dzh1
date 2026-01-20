@@ -38,8 +38,14 @@ EOF
 run1() {
     declare -a CMD=(
         "uv run e2e_cli --help"
+        "e2e_cli --help"
+        "e2e_cli alias view"
+        "e2e_cli alias --help"
+        "e2e_cli alias add"  # Adding panty
+        "e2e_cli alias view" # View
+
     )
-    CMDEXEC="${CMD[0]}"
+    CMDEXEC="${CMD[5]}"
     echo -e "${BBLUE} · · ────── ꒰ঌ·✦·໒꒱ ────── · ·"
     date && smell_fart
     echo -e "Executing:${RESET} ${CMDEXEC}"

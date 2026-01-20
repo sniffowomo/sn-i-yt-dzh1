@@ -1,0 +1,12 @@
+usage: e2e_cli alias [-h] {add, add_file, delete, view, set}  
+
+options:
+  -h, --help  show this help message and exit
+
+Alias Commands:
+  
+    add       To add api key and auth token
+    add_file  To add api key and auth token via file
+    delete    To delete api key and auth token
+    view      To view all alias and credentials
+    set       To set default alias for system
