@@ -1,0 +1,4 @@
+Query 1
+I have installed e2e_cli, using UV , and its stored in .venv, when I do the command
+e2e_cli alias set 
+Find out the exact file where this informtion is set

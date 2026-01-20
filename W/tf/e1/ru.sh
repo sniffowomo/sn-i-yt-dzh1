@@ -41,13 +41,12 @@ run1() {
         "e2e_cli --help"
         "e2e_cli alias view"
         "e2e_cli alias --help"
-        "e2e_cli alias add"      # Adding panty
-        "e2e_cli alias view"     # View
-        "e2e_cli node list"      # List all nodes, comes as a json file
-        "rg \"*config*\" .venv/" # Search for files with rg
+        "e2e_cli alias add"  # Adding panty
+        "e2e_cli alias view" # View
+        "e2e_cli node list"  # List all nodes, comes as a json file
 
     )
-    CMDEXEC="${CMD[6]}"
+    CMDEXEC="${CMD[5]}"
     echo -e "${BBLUE} · · ────── ꒰ঌ·✦·໒꒱ ────── · ·"
     date && smell_fart
     echo -e "Executing:${RESET} ${CMDEXEC}"
@@ -75,9 +74,10 @@ runc() {
 # Run System commands
 runsys() {
     declare -a CMD=(
-        "rg -u 'config' .venv/" # Search for files with rg
+        "rg -u 'config' .venv/"                 # Search for files with rg
+        "bat /home/vscode/.E2E_CLI/config.json" # View set credentials
     )
-    CMDEXEC="${CMD[0]}"
+    CMDEXEC="${CMD[1]}"
     echo -e "${BBLUE} · · ────── ꒰ঌ·✦·໒꒱ ────── · ·"
     date && smell_fart
     echo -e "Executing:${RESET} ${CMDEXEC}"
@@ -90,9 +90,9 @@ runsys() {
 
 # -- Execution Blocks ---
 panty() {
-    # run1 # Run one command at one time
+    run1 # Run one command at one time
     # runc  # Run all commands in array
-    runsys
+    # runsys
 }
 
 # Main Execution
