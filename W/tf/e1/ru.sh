@@ -41,9 +41,10 @@ run1() {
         "e2e_cli --help"
         "e2e_cli alias view"
         "e2e_cli alias --help"
-        "e2e_cli alias add"  # Adding panty
-        "e2e_cli alias view" # View
-        "e2e_cli node list"  # List all nodes, comes as a json file
+        "e2e_cli alias add"      # Adding panty
+        "e2e_cli alias view"     # View
+        "e2e_cli node list"      # List all nodes, comes as a json file
+        "rg \"*config*\" .venv/" # Search for files with rg
 
     )
     CMDEXEC="${CMD[6]}"
@@ -71,12 +72,27 @@ runc() {
     done
 }
 
+# Run System commands
+runsys() {
+    declare -a CMD=(
+        "rg -u 'config' .venv/" # Search for files with rg
+    )
+    CMDEXEC="${CMD[0]}"
+    echo -e "${BBLUE} · · ────── ꒰ঌ·✦·໒꒱ ────── · ·"
+    date && smell_fart
+    echo -e "Executing:${RESET} ${CMDEXEC}"
+    eval "${CMDEXEC}"
+    echo -e "${BGREEN}Done!"
+    echo -e "───── ⋆⋅☆⋅⋆ ─────${RESET}"
+}
+
 # /////////////////////////////
 
 # -- Execution Blocks ---
 panty() {
-    run1 # Run one command at one time
+    # run1 # Run one command at one time
     # runc  # Run all commands in array
+    runsys
 }
 
 # Main Execution
