@@ -44,7 +44,7 @@ tfexec() {
         "terraform login"
 
     )
-    CMDEXEC="${CMD[0]}"
+    CMDEXEC="${CMD[1]}"
     echo -e "${BBLUE} · · ────── ꒰ঌ·✦·໒꒱ ────── · ·"
     date && smell_fart
     echo -e "Executing:${RESET} ${CMDEXEC}"
@@ -110,7 +110,8 @@ e2e1() {
 
 e2e2() {
     declare -a CMD=(
-        ""
+        "cd e1 && uv pip install e2e-cli"
+        "uv run e2e_cli --help"
 
     )
     CMDEXEC="${CMD[0]}"
@@ -127,7 +128,8 @@ e2e2() {
 panty() {
     # tfexec
     # otfexec
-    e2eisntall
+    # e2eisntall
+    e2e2
 }
 
 # Main Execution

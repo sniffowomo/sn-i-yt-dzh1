@@ -1,0 +1,30 @@
+usage: e2e_cli [-h] [-v] [--info] [--alias ALIAS] [--location LOCATION] [--project_id PROJECT_ID]  Command  ...
+
+E2E CLI
+
+options:
+  -h, --help            show this help message and exit
+  -v, --version         To view version Info
+  --info                To view package Info
+  --alias ALIAS         The name of your access credentials
+  -location, --location {Delhi,Mumbai}
+                        The region where your resource is located.
+  --project_id PROJECT_ID
+                        The project ID you want to access this resource from.
+
+Commands:
+  
+    help                To view man doc
+    alias               To add delete tokens
+    node                To apply crud operations over Nodes
+    lb                  To apply operations over Load-Balancer
+    bucket              To create/delete/list buckets of the user
+    dbaas               To perform operations over DBaaS service provided
+    image               To perform operations over Image service provided
+    autoscaling         To create/delete/list autoscaling for the user
+    vpc                 To create/delete/list vpc for the user
+    cdn                 To create/delete/list cdn for the user
+    volume              To create/delete/list volume for the user
+    logs                To videw/delete/search logs for the user
+    faas                To perform operation over e2e functions
+    security_groups     To view security_groups for user
