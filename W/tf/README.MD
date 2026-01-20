@@ -8,6 +8,7 @@
 5. [Notes](#notes)
    1. [Regarding storing envs](#regarding-storing-envs)
 6. [Regarading Remote backend](#regarading-remote-backend)
+7. [Dirz](#dirz)
 
 # TF - Learning terraform
 
@@ -53,3 +54,11 @@ terraform apply
 
 1. From - [`Tokens`](https://app.terraform.io/app/settings/tokens) - Made tokens exported to bash
 2. [`Remote BackendBunda`](https://developer.hashicorp.com/terraform/language/backend/remote) - Docs for learning about RemotePussy Licking.
+
+# Dirz
+
+1. Explanation of dirs
+
+|      Dir      |     What     |
+| :-----------: | :----------: |
+| [`e1`](./e1/) | e2e_cli work |
