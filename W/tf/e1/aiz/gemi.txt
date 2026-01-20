@@ -1,4 +1,5 @@
 Query 1
 I have installed e2e_cli, using UV , and its stored in .venv, when I do the command
 e2e_cli alias set 
-Find out the exact file where this informtion is set
+Find out the exact file where this informtion is set and wrute the results to a markdown file , 
+with a suitable abbreviation , and the summary of the query as the heading in the file
