@@ -15,7 +15,7 @@ Write a rust based CLI that does the following in a new directory called envdump
 5. Optomize for idomatic code, clear code , modular and well documented 
 6. When finished, also crate a file called `implementation_notes.md` , that explains your reasoning and steps taken, use headings , dont ramble and use tables etc
 
-Project 3
+# Project3
 1. I have a e2e cli , how can i create a skill with it so that I can use natural language in gemini to perform opertions
 2. Write the answer in a markdown file called "customAgentSkills.md"
 3. Make sure to search teh current documentation and provide verfiable information

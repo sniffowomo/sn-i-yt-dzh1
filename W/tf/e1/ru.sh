@@ -37,18 +37,20 @@ EOF
 # Run each command one by one
 run1() {
     declare -a CMD=(
-        "uv run e2e_cli --help"
-        "e2e_cli --help"
-        "e2e_cli alias view"
-        "e2e_cli alias --help"
-        "e2e_cli alias add"  # Adding panty
-        "e2e_cli alias view" # View
-        "e2e_cli node list"  # List all nodes, comes as a json file
+        "uv run e2e_cli --help"           # 0
+        "e2e_cli --help"                  # 1
+        "e2e_cli alias view"              # 2
+        "e2e_cli alias --help"            # 3
+        "e2e_cli alias add"               # 4 Adding panty
+        "e2e_cli alias view"              # 5 View
+        "e2e_cli node list"               # 6 List all nodes, comes as a json file
+        "e2e_cli Dublin20Jan26 node list" # 7 List all nodes, comes as a json file
+        "e2e_cli  node create"            # 8 Create Node
 
     )
-    CMDEXEC="${CMD[5]}"
+    CMDEXEC="${CMD[8]}"
     echo -e "${BBLUE} · · ────── ꒰ঌ·✦·໒꒱ ────── · ·"
-    date && smell_fart
+    date
     echo -e "Executing:${RESET} ${CMDEXEC}"
     eval "${CMDEXEC}"
     echo -e "${BGREEN}Done!"
