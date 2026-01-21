@@ -126,10 +126,10 @@ e2e2() {
 
 # -- Execution Blocks ---
 panty() {
-    # tfexec
+    tfexec
     # otfexec
     # e2eisntall
-    e2e2
+    # e2e2
 }
 
 # Main Execution
